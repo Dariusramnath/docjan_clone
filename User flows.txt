@@ -1,0 +1,7 @@
+- User wants to randomly generate an arbitrary amount between different categories
+- User wants to randomly generate an arbitrary amount between one category 
+- User wants to create a single generation based on options they choose
+
+**
+- User wants to keep one/some traits the same but randomize others to view how that piece interacts with others
+- User wants to view the same generation over multiple backgrounds

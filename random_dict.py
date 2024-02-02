@@ -1,4 +1,5 @@
 # Route -> api_generate
+# Passing in a list and name e
 def gen_api(list, filesuffix):
 
   # Create file paths to the actual files in storage for use in Transcode function
@@ -44,7 +45,7 @@ def gen_api(list, filesuffix):
   return final_url
 
 
-# Generate from specific category(Elemental, Zoological, etc.)
+# Random generation from specific category(Elemental, Zoological, etc.)
 def gen_func_QA3(filesuffix):
   print(f"File suffix = {filesuffix}")
   directory = "downsamp"
@@ -89,11 +90,12 @@ def gen_func_QA3(filesuffix):
 
   random_list.reverse()
 
-  TranscodeOpt(random_list, f'{filesuffix}.mp4')
+  TranscodeOpt(random_list, f'{filesuffix}.mp4') # Should use T-O-API
 
 
 
 # Random generation, store in wasabi and return url to user
+# Passing in a name 
 def gen_func(filesuffix):
 
   def create_folder_dictionary(directory):

@@ -3,7 +3,6 @@
 # Extract the values from the list and append them to an empty list.
 # Randomize a name, call the function "gen_api" with the list and name.
 # Should return a wasabi bucket url.
-
 @app.route('/api_generate', methods=['POST'])
 def receive_data():
   try:
@@ -15,9 +14,6 @@ def receive_data():
       for json_string in selected_values:
           parsed_object = json.loads(json_string)
           list.append(parsed_object['value'])
-  
-      # Output the values only list
-      # print('List:\n', list)
 
       name = data.get('name', None)
       if name is None:
@@ -30,7 +26,7 @@ def receive_data():
   
 
 # Route that fetches existing files in project sub-directories  
-# Set up to retrieve a "project" and "search_term" value - uses to return files 
+# Set up to retrieve a "project" and "search_term" param - uses to return files 
 @app.route('/get_files', methods=['GET'])
 def get_files():
     project = request.args.get('project', '')
